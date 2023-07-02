@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./index.module.scss";
 import UserIcon from "../../../assets/profile/userIcon.svg";
 import WalletIcon from "../../../assets/profile/walletIcon.svg";
@@ -49,7 +49,6 @@ const sidebarItems = [
 
 const Sidebar = () => {
   const [activeSidebarItem, setActiveSidebarItem] = useState(0);
-
   return (
     <div className={styles.root}>
       <div className={styles.top}>
