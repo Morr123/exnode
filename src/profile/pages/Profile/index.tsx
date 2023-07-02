@@ -8,7 +8,6 @@ import ProfileBottom from "../../components/Profile/ProfileBottom";
 const Profile = () => {
   return (
     <div className={styles.root}>
-      <h2>Profile</h2>
       <ProfileTop />
       <OveralBalance />
       <Statistics />
