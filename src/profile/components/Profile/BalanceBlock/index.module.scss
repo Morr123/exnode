@@ -9,7 +9,6 @@
   margin-right: 50px;
   .info {
     margin-left: 5px;
-    
   }
 }
 
@@ -25,7 +24,7 @@
 
 .balanceText {
   font-size: 26px;
-  color: rgb(65, 114, 246);;
+  color: rgb(65, 114, 246);
 }
 
 .mainBalance {
@@ -44,9 +43,10 @@
   justify-content: space-between;
 }
 
-.available, .frozen {
+.available,
+.frozen {
   font-size: 12px;
-  color: #FFFFFF70;
+  color: #ffffff70;
 }
 
 .btnsBlock {
@@ -57,6 +57,7 @@
 
 .img {
   width: 22px;
+  cursor: pointer;
 }
 
 .inArrow {
@@ -64,7 +65,7 @@
 }
 
 .btnText {
-  color: #FFFFFF90;
+  color: #ffffff90;
   font-size: 16px;
   margin-top: 5px;
 }
@@ -74,4 +75,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.bottomBtn {
+  margin-top: 20px;
 }
