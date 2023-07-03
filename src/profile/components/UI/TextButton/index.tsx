@@ -1,17 +1,26 @@
-import styles from './index.module.scss'
+import styles from "./index.module.scss";
 
 interface TextButtonProps {
   text: string;
   className?: string;
   onClick?: () => void;
-  width: number
+  width?: number | string;
 }
 
-const TextButton = ({text, className, onClick, width} : TextButtonProps) => {
+const TextButton = ({
+  text,
+  className,
+  onClick,
+  width = "fit-content",
+}: TextButtonProps) => {
   return (
-    <div className={`${styles.main} ${className}`} onClick={onClick} style={{width: width}}>
+    <div
+      className={`${styles.main} ${className}`}
+      onClick={onClick}
+      style={{ width: width }}
+    >
       <p>{text}</p>
     </div>
-)
-}
-export default TextButton
+  );
+};
+export default TextButton;

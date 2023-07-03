@@ -27,7 +27,7 @@ const ProfileBottom = () => {
           Обратная связь
         </button>
       </div>
-      <ContentBlock>
+      <ContentBlock className={styles.paymentMethod}>
         {activeSlide === 0 ? <PaymentMethod /> : <Feedback />}
       </ContentBlock>
     </div>
