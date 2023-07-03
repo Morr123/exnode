@@ -56,7 +56,7 @@ const data = [
 
 const Statistics = () => {
   return (
-    <ContentBlock>
+    <ContentBlock className={styles.main}>
       <h2 className={styles.title}>Статистика</h2>
       <div className={styles.gridContainer}>
         {data.map((el, index) => (
