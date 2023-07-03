@@ -1,25 +1,28 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import {Provider} from "react-redux";
-import {store} from "./store/store";
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import { Provider } from "react-redux";
+import { store } from "./store/store";
+import { store as newSrcStore } from "./profile/redux/store";
 import ThemeProvider from "./components/Theme/ThemeProvider";
-import {HashRouter} from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 
 const root = ReactDOM.createRoot(
-  document.getElementById('exnode') as HTMLElement
+  document.getElementById("exnode") as HTMLElement
 );
 root.render(
   <React.StrictMode>
-      <HashRouter>
-          <Provider store={store}>
-              <ThemeProvider>
-                  <App />
-              </ThemeProvider>
-          </Provider>
-      </HashRouter>
+    <HashRouter>
+      <Provider store={store}>
+        <Provider store={newSrcStore}>
+          <ThemeProvider>
+            <App />
+          </ThemeProvider>
+        </Provider>
+      </Provider>
+    </HashRouter>
   </React.StrictMode>
 );
 
