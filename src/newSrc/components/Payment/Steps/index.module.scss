@@ -1,0 +1,37 @@
+.steps {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+  justify-content: space-between;
+}
+
+.line {
+  width: 240px;
+  border: 1px dashed #FFFFFF70;
+}
+
+.numberBlock {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(78, 210, 78, 0.37);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.active {
+  background-color: rgba(78, 210, 78, 0.8);
+  box-shadow: 0px 0px 16px 2px rgba(78, 210, 78, 0.384);
+}
+
+
+.descriptionBlock {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.description {
+  max-width: 150px;
+  font-size: 10px;
+}

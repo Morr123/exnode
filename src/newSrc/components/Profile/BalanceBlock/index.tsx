@@ -1,7 +1,6 @@
 import ContentBlock from "../../UI/ContentBlock";
 import styles from "./index.module.scss";
 import arrow from "../../../../assets/profile/icons/out.svg";
-import info from "../../../../assets/profile/icons/info.svg";
 import add from "../../../../assets/profile/icons/add.svg";
 import exchange from "../../../../assets/profile/icons/exchange.svg";
 import TextButton from "../../UI/TextButton";
