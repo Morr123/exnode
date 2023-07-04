@@ -5,7 +5,6 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { Provider } from "react-redux";
 import { store } from "./store/store";
-import { store as newSrcStore } from "./profile/redux/store";
 import ThemeProvider from "./components/Theme/ThemeProvider";
 import { HashRouter } from "react-router-dom";
 
@@ -16,11 +15,9 @@ root.render(
   <React.StrictMode>
     <HashRouter>
       <Provider store={store}>
-        <Provider store={newSrcStore}>
           <ThemeProvider>
             <App />
           </ThemeProvider>
-        </Provider>
       </Provider>
     </HashRouter>
   </React.StrictMode>
