@@ -17,9 +17,8 @@ import { Footer } from "./components/Footer/Footer";
 // import { Profile } from "./components/Profile/Profile";
 import { getProfile } from "./store/profileReduces";
 import { getToken } from "./utils/api";
+import Layout from "./newSrc/layout";
 
-import Profile from "./profile/pages/Profile";
-import Layout from "./profile/layout";
 
 const App = () => {
   const dispatch: any = useDispatch();
@@ -279,7 +278,7 @@ const App = () => {
   //             }
   //           />
 
-  //           <Route path={"/profile"} element={<Profile />} />
+            // <Route path={"/profile"} element={<Profile />} />
   //         </Routes>
   //       </main>
   //       <Footer />
