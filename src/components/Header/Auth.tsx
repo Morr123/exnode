@@ -11,8 +11,9 @@ import {
   getThemeMode,
 } from "../../store/selectors";
 import { login, sendEmailCode, signIn } from "../../store/profileReduces";
-import { setRegMode } from "../../store/stockReducer";
+import { setAuthMode, setRegMode } from "../../store/stockReducer";
 import { userLogin, userRegister } from "../../newSrc/services/profileServices";
+import { useNavigate, useNavigation } from "react-router-dom";
 
 export function validateEmail(value: any) {
   let error;
@@ -86,16 +87,17 @@ export const Auth: FC<{ on: any }> = ({ on }) => {
 
   const [emailValue, setEmailValue] = useState("");
 
-  const Login = async (email:string, password:string) => {
-    const {data} = await userLogin(password, email);
+  const Login = async (email: string, password: string) => {
+    const { data } = await userLogin(password, email);
     localStorage.setItem("token", JSON.stringify(data.token));
-  }
+  };
 
   const Register = async (login: string, email: string, password: string) => {
-    const { data } = await userRegister(password, login, email)
-    console.log(data)
-  }
+    const { data } = await userRegister(password, login, email);
+    console.log(data);
+  };
 
+  const navigate = useNavigate();
 
   const notify = () =>
     toast.success("Пароль скопирован в буфер обмена", {
@@ -131,10 +133,10 @@ export const Auth: FC<{ on: any }> = ({ on }) => {
             <Formik
               initialValues={{ email: "", password: "" }}
               onSubmit={(values, actions) => {
-                
-                Login(values.email, values.password)
+                Login(values.email, values.password);
+                navigate("/profile");
                 actions.setSubmitting(false);
-                
+                setAuthMode(0);
               }}
             >
               {({ errors, touched, isValidating, resetForm }) => (
@@ -194,7 +196,7 @@ export const Auth: FC<{ on: any }> = ({ on }) => {
               initialValues={{ empty: "", login: "", mail: "", password: "" }}
               onSubmit={(values, actions) => {
                 if (passwordValue) {
-                 Register(values.login, values.mail, values.password)
+                  Register(values.login, values.mail, values.password);
                 } else {
                   signValidatePassword(passwordValue, (value: any) =>
                     setValidatePasswordValue(value)
