@@ -7,9 +7,9 @@ import Payment from "../pages/Payment";
 const Layout: React.FC = () => {
   return (
     <div className={`container ${style.root}`}>
-      {/* <Sidebar /> */}
-      {/* <Profile /> */}
-      <Payment />
+      <Sidebar />
+      <Profile />
+      {/* <Payment /> */}
     </div>
   );
 };

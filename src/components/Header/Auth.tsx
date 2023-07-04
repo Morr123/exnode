@@ -136,7 +136,7 @@ export const Auth: FC<{ on: any }> = ({ on }) => {
                 Login(values.email, values.password);
                 navigate("/profile");
                 actions.setSubmitting(false);
-                setAuthMode(0);
+                setAuthMode(false);
               }}
             >
               {({ errors, touched, isValidating, resetForm }) => (

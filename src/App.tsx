@@ -41,8 +41,8 @@ const App = () => {
       className="wrapper"
       onClick={(event) => {
         // @ts-ignore
-        // @ts-ignore
         if (
+          // @ts-ignore
           !event.target.closest(".filter_form .stock_summ") &&
           document
             .querySelector(".filter_form .stock_currency__toggle")
@@ -55,8 +55,8 @@ const App = () => {
             .querySelector(".filter_form .currency__select")
             ?.classList.remove("active");
         }
-        // @ts-ignore
         if (
+          // @ts-ignore
           !event.target.closest(".filter_form .stock_paid") &&
           document
             .querySelector(".filter_form .stock_paid__toggle")
@@ -66,8 +66,8 @@ const App = () => {
             .querySelector(".filter_form .stock_paid__toggle")
             ?.classList.remove("active");
         }
-        // @ts-ignore
         if (
+          // @ts-ignore
           !event.target.closest(".filter_form .stock_filter") &&
           document
             .querySelector(".filter_form .stock_filter__toggle")
@@ -278,7 +278,7 @@ const App = () => {
             }
           />
 
-          <Route path={"/profile"} element={<Profile />} />
+          <Route path={"/profile"} element={<Layout />} />
         </Routes>
       </main>
       <Footer />
