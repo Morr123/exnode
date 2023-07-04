@@ -13,7 +13,9 @@ const Payment = () => {
   const getOrderInformation = async () => {
     const { data } = await getOrderInfo(token.replace(/"/g, ""), 1);
     setOrderInfo(data);
+    console.log(data)
   };
+
   const time = new Date(orderInfo?.data.created_at || "");
   const currentTime = `${time.getDate()}.${time.getMonth()}.${time.getFullYear()} ${time.getHours()}:${time.getMinutes()}:${time.getSeconds()}`;
 

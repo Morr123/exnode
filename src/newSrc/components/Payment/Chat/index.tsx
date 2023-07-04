@@ -14,11 +14,14 @@ const Chat = () => {
     const { data } = await getMessages(1, token.replace(/"/g, ""));
     setMessages(data);
   };
-  const [a, setA] = useState(1);
-  setInterval(() => setA(a + 1), 500);
+
   useEffect(() => {
-    setInterval(() => getAllMessages(), 500);
+    const interval = setInterval(() => getAllMessages(), 3000);
+    return () => {
+      clearInterval(interval);
+    };
   }, []);
+
 
   return (
     <div className={styles.main}>
