@@ -1,8 +1,8 @@
 import React from "react";
 import styles from "./index.module.scss";
-import avatar from "../../../assets/user.png";
+import avatar from "../../../../assets/user.png";
 import { AiOutlinePaperClip } from "react-icons/ai";
-import arrow from "../../../assets/profile/icons/out.svg";
+import arrow from "../../../../assets/profile/icons/out.svg";
 
 const Chat = () => {
   return (

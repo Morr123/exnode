@@ -3,7 +3,7 @@ import InfoBlock from '../../components/Payment/InfoBLock'
 import styles from './index.module.scss'
 import Steps from '../../components/Payment/Steps'
 import PayBlock from '../../components/Payment/PayBlock'
-import Chat from '../../components/Chat'
+import Chat from '../../components/Payment/Chat'
 
 const Payment = () => {
   return (
