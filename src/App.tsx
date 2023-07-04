@@ -19,6 +19,7 @@ import { getProfile } from "./store/profileReduces";
 import { getToken } from "./utils/api";
 import Layout from "./newSrc/layout";
 import Profile from "./newSrc/pages/Profile";
+import Payment from "./newSrc/pages/Payment";
 
 const App = () => {
   const dispatch: any = useDispatch();
@@ -279,6 +280,7 @@ const App = () => {
           />
 
           <Route path={"/profile"} element={<Layout />} />
+          <Route path={"/newbuy"} element={<Payment />} />
         </Routes>
       </main>
       <Footer />

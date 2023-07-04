@@ -26,6 +26,9 @@ export const StockItem = ({ item, type, paidTypes }) => {
 
     const [paidSelect, setPaidSelect] = useState(1)
 
+    
+    
+
     return <>
         {sellMode ? <div className={cl.sell}>
             <div className={cl.sell_main}>
@@ -140,13 +143,28 @@ export const StockItem = ({ item, type, paidTypes }) => {
                         <span>1 {item.currency === 0 ? 'USDT' : (item.currency === 1 ? 'BTC' : 'ETH')} ≈ {item.price} RUB</span>
                     </div>
                     <div className={cl.sell_actions}>
-                        <button onClick={() => setSellMode(false)}>Отменить</button>
-                        <button disabled={!inputValue || paidSelect.length === 0} onClick={() => {
-                            dispatch(createOrder({
-                                offer_id: item.id,
-                                sum:inputValue
-                            },item.user.login))
-                            if(!(location.pathname.split('/').slice(-1)[0] === 'chat')) navigate('/' + location.pathname.slice(1) + '/chat')
+                        <button onClick={() => console.log('sfvsd',item)}>Отменить</button>
+                        <button  onClick={() => {
+                            // dispatch(createOrder({
+                            //     offer_id: item.id,
+                            //     sum:inputValue
+                            // },item.user.login))
+                            // if(!(location.pathname.split('/').slice(-1)[0] === 'chat')) navigate('/' + location.pathname.slice(1) + '/chat')
+                            // 
+                            // 
+                            // 
+                            // 
+                            // 
+                            // 
+                            // 
+                            // 
+                            // 
+                            // 
+                            // 
+                            // 
+
+                            // 
+                            
                         }}>Купить {item.currency === 0 ? 'USDT' : (item.currency === 1 ? 'BTC' : 'ETH')}</button>
                     </div>
                 </div>
@@ -206,6 +224,7 @@ export const StockItem = ({ item, type, paidTypes }) => {
                     //@ts-ignore
                     if(profile?.id) setSellMode(true)
                     else dispatch(setAuthMode(true))
+                    console.log(item);
                 }}>
                     <button>{type === 1 ? 'Купить' : 'Продать'} {item.currency === 0 ? 'USDT' : (item.currency === 1 ? 'BTC' : 'ETH')}</button>
                 </div>
